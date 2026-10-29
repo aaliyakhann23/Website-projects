@@ -1,0 +1,886 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+main{
+    width:100%;
+    height:100%;
+}
+nav{
+    padding:0 20px;
+    width:100%;
+    height:100px;
+
+    display:flex;
+    justify-content: space-around;
+}
+.nav-logo{
+    display:flex;
+    gap:20px;
+    align-items: center;
+}
+.nav-logo button{
+    padding:10px 15px;
+    border-radius: 25px;
+    background-color: rgb(245, 245, 210);
+    border:none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 0 0 transparent;
+    transition: box-shadow 0.4s ease;
+}
+
+.nav-logo button:hover {
+    box-shadow: 0 8px 20px #0003;
+    border:0.5px solid black;
+    transform:scaleX(1);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    align-items: center;
+
+}
+.nav-links h1{
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    position:relative;
+    text-decoration: none;
+} 
+
+.nav-links h1::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    height:1.5px;
+    width:100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in;
+    cursor:pointer;
+}
+.nav-links h1:hover{
+    color:rgb(160, 158, 160);
+}
+.nav-links h1:hover::after{
+    transform:scaleX(1);
+    
+
+    
+}
+.nav-links button{
+    padding:10px 15px;
+    border-radius: 25px;
+    background-color: rgb(249, 249, 212);
+    border:none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 0 0 transparent;
+    transition: box-shadow 0.4s ease;
+
+}  
+.nav-links button:hover {
+    box-shadow: 0 8px 20px #0003;
+    border:0.5px solid black;
+    transform:scaleX(1);
+}
+.main-head{
+   padding: 30px 100px;
+   
+}
+.main-head h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    font-weight: 400;
+}
+.main-head p{
+   padding:30px 10px;
+   line-height: 30px;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   font-size: 20px;
+
+}
+.main-head button{
+    padding:10px 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    border-radius: 30px;
+    border:none;
+    background: rgb(224, 224, 224);
+    color: black;
+    border: 1px solid black;
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+.main-head button:hover {
+    background: black;
+    color: white;
+}
+.scroll-sec{
+    display:flex;
+    gap:20px;
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    height:100px;
+    align-items: center;
+
+
+}
+.scroll-img{
+    display:flex;
+    gap:100px;
+    flex-shrink: 0;
+    padding-right: 150px;
+    
+}
+.scroll-track{
+    display: flex;
+    width: max-content;
+    animation-name: scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 22s;
+    align-items: center;
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0)
+    }
+    to{
+        transform:translateX(-50%)
+    }
+}
+.cards{
+    width:100%;
+    height:400px;
+    display:flex;
+    gap:40px;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 15px 40px;
+
+}
+.card{
+    height:90%;
+    width:23%;
+    background-color: rgb(246, 243, 243);
+    text-align: justify;
+    border-radius: 15px;
+    
+
+}
+.card h1{
+    text-align: center;
+    margin:35px 10px;
+    font-size: 35px;
+    font-weight: 500;
+}
+.card p{
+    text-align: center;
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 20px;
+    font-weight: 300;
+    color:rgb(108, 108, 108);
+}
+.card a{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:35px 0;
+    font-size: 17px;
+    color:black;
+    text-decoration: none;
+    font-weight: 500;
+}
+.card {
+    transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+.card a:hover{
+    color:rgb(30, 29, 29);
+    text-decoration: underline;
+    transition:all 0.4s ease-in;
+    
+}
+.work h2{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 350;
+}
+.selected-wk{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding:15px 35px;
+}
+.selected-wk h2{
+    font-size: 45px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+}
+.selected-wk h3{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    height:40px;
+    width:100px;
+    border-radius: 40px;
+    border:1px solid black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.selected-wk h3:hover{
+    background-color: black;
+    color:white;
+    transition:all 0.5s ease-in;
+}
+.text h2,
+.text h3 {
+    margin: 0;
+}
+.text h2{
+    font-size: 23px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+.text h3{
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    height:35px;
+    width:100px;
+    border-radius: 20px;
+    border:1px solid black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-card {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    padding: 12px 25px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.product-item {
+    width: 45%;
+}
+
+.pt-card {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.pt-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 2s ease;
+}
+
+.pt-card:hover img {
+    transform: scale(1.3);
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.text h3:hover{
+    background-color: rgb(76, 76, 76);
+    color:white;
+    border:1px solid white;
+    box-shadow: 1px 2px 10px rgb(72, 72, 72);
+    transition:all 0.4s ease-in;
+}
+.values h1{
+    padding:15px 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 25px;
+    color:rgb(77, 77, 77);
+}
+.services{
+    width:100%;
+    height:60vh;
+    
+    display:flex;
+    gap:20px;
+    justify-content: center;
+    padding:15px 40px;
+}
+.services-card{
+    width:23%;
+    height:95%;
+    background-color: #f0f4f8;
+    padding: 60px 63px 48px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#white{
+    background-color: white;
+}
+
+.services-card h4{
+    margin:0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+.services-card h2 {
+    margin-top: auto;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.services-card:hover{
+    transform:rotate(5deg );
+    transition:all 0.4s ease-in;
+}
+
+.services-card button {
+    margin-top: auto;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+    
+#card-1{
+    margin-top:auto;
+    background-color: #e4ecf5;
+}
+#card-2{
+    background-color: rgb(224, 246, 224);
+}
+
+#card-3{
+    background-color: rgb(248, 228, 228);
+}
+
+#card-4{
+    background-color: rgb(246, 246, 225);
+}
+#card-5{
+    background-color: rgb(176, 223, 232);
+}
+#card-6{
+    background-color: rgb(239, 231, 183);
+}
+.main-text{
+    margin-top: 20px;
+    text-align: center;
+
+}
+.main-text h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+.main-text2{
+    width:60%;
+    height:50%;
+    padding:20px 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    margin:0 auto;
+}
+.main-text2 p{
+    font-size: large;
+    line-height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.team h1{
+    margin-left: 40px;
+    padding:30px 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+.team-head{
+    display:flex;
+    justify-content: space-between;
+    padding:40px 70px;
+}
+.team-head h1{
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.team-head button{
+    padding:0px 20px;
+    border-radius: 30px;
+    border:none;
+    background-color: rgb(33, 33, 33);
+    color:white;
+}
+.team-head button:hover{
+    background-color: #d8dadb;
+    color:black;
+    transition:all 0.4s ease-in;
+    font-size:16px;
+
+}
+/* .team-expert{
+    width: 100%;
+    height:70vh;
+    background-color: blanchedalmond;
+    display:flex;
+    gap:30px;
+}
+.team-join{
+    width:25%;
+    height:90%;
+    background-color: chocolate;
+}
+.expert-card{
+     width:25%;
+    height:90%;
+    background-color: rgb(137, 112, 205);
+    display:flex;
+    gap:30px;
+} */
+.team-expert {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    padding: 27px 5.5%;
+    align-items: stretch;
+}
+
+/* Left introduction card */
+.team-join {
+    width: 25%;
+    min-height: 590px;
+    background-color: #f0f5f4;
+    padding: 75px 40px 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.team-join h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.team-join h2 {
+    font-family: "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.team-join p {
+    color: #999;
+    font-size: 16px;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.team-join button {
+    margin-top: auto;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+.expert-card {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    gap: 30px;
+    height:70vh;
+}
+
+.ex-cards {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    overflow:hidden;
+}
+
+.ex-cards img {
+    width: 100%;
+    height: 505px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.expert-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 25px;
+}
+
+.expert-info h3 {
+    font-family: "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.expert-info button {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+.social-icons {
+    position: absolute;
+    top:auto;
+    bottom: 80px;
+    left: 70%;
+    transform: translate(-50%, 20px);
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 2;
+}
+.social-icons i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 22px;
+}
+.ex-cards:hover .social-icons {
+    opacity: 1;
+    visibility:visible;
+    transform: translate(-50%, 0);
+}
+.expert-info button:hover{
+    transition:all 0.4s ease-out;
+    background-color: black;
+    color:white;
+    border:1px solid white;
+}
+.team-join button:hover{
+    transition:all 0.4s ease-out;
+    background-color:rgb(198, 195, 195);
+    color:black;
+    
+    
+}
+.logoipsum{
+    display:flex;
+    height:50vh;
+    width:70%;
+    background-color: rgb(250, 249, 248);
+    gap:50px;
+    justify-self: self-end;
+    margin-right: 80px;
+    padding:20px 20px;
+    margin-top:50px;
+}
+.logo-text h1{
+    font-size: 30px;
+    font-weight: 500;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 45px;
+}
+.logo-text p{
+    padding:20px 10px;
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+    line-height: 25px;
+}
+.contact{
+    width:80%;
+    height:60vh;
+    background-color: rgb(240, 237, 225);
+    display:flex;
+    gap:30px;
+    margin:0 auto;
+    
+}
+.contact-head{
+    width:40%;
+    padding:30px 40px;
+
+}
+.contact-head h4{
+    padding:30px 10px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+.contact-text h1{
+    
+    font-size: 55px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+.contact-text p{
+    padding:40px 0;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contact-text{
+    padding:30px 20px;
+}
+.contact-text button{
+    padding:10px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border:None;
+    background-color: rgb(27, 27, 27);
+    color:white;
+
+}
+.blog h1{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    padding:50px 70px;
+
+}
+.branding{
+    display:flex;
+    justify-content: space-between;
+    padding:20px 40px;
+
+}
+.branding h1{
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+.branding button{
+    padding:10px 15px;
+    border-radius: 20px;
+    border:none;
+    background-color: black;
+    color:white;
+
+}
+.insights{
+    width:90%;
+    height:65vh;
+    display:flex;
+    gap:30px;
+    padding:10px 10px;
+    margin:20px auto;
+}
+.insight-cards{
+    width:25%;
+    height:90%;
+   
+}
+.insight-img{
+    height:100%;
+    width:100%;
+    overflow:hidden;
+}
+.insight-img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.insight-content h2{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.insight-content a{
+    padding:5px 10px;
+    background-color: rgb(85, 84, 84);
+    color:white;
+    font-size: 15px;
+    margin: 15px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    border-radius: 15px;
+    display:inline-block;
+}
+.insight-cards:hover .insight-img img{
+    transform:scale(1.1);
+}
+.insight-content a:hover{
+    color:white;
+    text-decoration: underline;
+    bottom:10px;
+    background-color: black;
+    transition:all 0.4s ease-out;
+
+}
+footer{
+    width:100%;
+    height:60vh;
+    
+    margin-top:80px;
+    
+    display:flex;
+    gap:20px;
+    
+}
+.footer-links{
+    width:25%;
+    height:90%;
+    
+    
+}
+.ftr-img{
+    display:flex;
+    justify-content: center;
+    
+}
+.ftr-img img{
+    padding:30px 30px;
+    height:120px;
+    width:150px;
+    
+}
+.ftr-social-icon{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+    padding:40px 0;
+}
+.ftr-social-icon i{
+    font-size: 30px;
+
+}
+.ftr-head{
+    padding:40px 40px;
+     position:relative;
+    overflow: hidden;
+
+}
+.ftr-head h2{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+.ftr-head a{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px;
+    color:rgb(45, 44, 44);
+    position:relative;
+   
+}
+
+.ftr-head button{
+    margin-top: 20px;
+    padding:10px 15px;
+    border-radius: 15px;
+    background-color: black;
+    color:white;
+    border:none;
+}
+.ftr-head a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: rgb(44, 44, 44);
+    transition: width 0.3s ease;
+    
+}
+
+.ftr-head a:hover::before {
+    width:30%;
+    
+}
+.ftr-head a:hover{
+    color:#999;
+}
+.ftr-social-icon i:hover{
+    transform:scale(1.3);
+    color:#8a8b8d;
+    transition:all 0.4s ease-out;
+
+}
+.ftr-head button:hover{
+    background-color: #797979;
+    color: white;
+    transition:all 0.2s ease-in-out;
+
+}
+.copyright{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.copyright h2{
+    padding:40px 20px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    color:#999;
+
+}
+.branding button:hover{
+    background-color: #f0f4f8;
+    color:black;
+    transition:all 0.3s ease-in-out;
+}
+.contact-text button:hover{
+    background-color: #8d8d8d;
+    color:black;
+    transition:all 0.2s ease-in-out;
+}

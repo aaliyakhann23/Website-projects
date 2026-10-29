@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+main{
+    height:100%;
+    width:100%;
+}
+.grid-container > * {
+    min-width: 0;
+    min-height: 0;
+}
+.grid-container{
+    display:grid;
+    height:100%;
+    width:100%;
+    grid-template-columns: 5% 35% 20% 15% 15%;
+    grid-template-rows: 20% 50% 25%;
+    grid-template-areas: "navbar profile portfolio portfolio portfolio"
+                "navbar profile flamingo flamingo side-stats"
+                "navbar profile apple-logo award-card award-card";
+    gap:30px;
+    margin:10px 10px;
+}
+.navbar{
+    grid-area: navbar;
+    background-color:azure;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+    margin-left: 40px;
+    
+}
+.nav-links{
+    display:flex;
+    gap:30px;
+    writing-mode: vertical-lr;
+    margin-bottom: 100px;
+
+}
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    white-space: nowrap;
+    writing-mode:vertical-lr;
+    transform: rotate(-180deg);
+    background-color: rgb(232, 240, 240);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+} 
+
+.profile{
+    grid-area:profile;
+    background-color: rgb(156, 138, 239);
+    border-radius: 15px;
+    position:relative;
+    overflow:visible;
+    
+}
+.circle {
+    position: absolute;
+
+    width: 50%;
+    height: 50%;
+
+    top: 30%;
+    left: 27%;
+
+    border: 4px solid white;
+    border-radius: 50%;
+
+    background-color: #d6a0df;
+}
+
+.profile-img {
+    position: relative;
+   
+    width: 90%;
+    aspect-ratio: 1;
+    display:flex;
+    
+    justify-content: center;
+    margin: 0 auto;
+}
+.profile-img img {
+    position: absolute;
+    top:30%;
+    left:22%;
+    width: 60%;
+    height: 60%;
+    
+    object-fit: contain;
+
+    z-index: 2;
+}
+.profile::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 60px;
+
+    background-color:white;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        70% 100%,
+        0 100%
+    );
+}
+.profile-abtme h4 {
+    position: absolute;
+
+    top: 25px;
+    left: 30px;
+
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+
+    z-index: 10;
+}
+.profile-contnt p{
+    color:rgb(220, 219, 219);
+    font-weight: 300;
+    font-size: 40px;
+    padding:0px 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.profile-contnt h2{
+    color:white;
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:0px 25px;
+    font-weight: 500;
+    
+}
+.profile-btm{
+    position: absolute;
+
+    left: 25px;
+    right: 25px;
+    bottom: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-btm p {
+    font-size: 14px;
+    color: rgb(227, 225, 225);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:5px 5px;
+
+}
+.profile-logo h3{
+   font-size: 8px;
+
+}
+.profile-logo {
+    width: 55px;
+    height: 55px;
+
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 7px;
+    color: white;
+}
+.portfolio{
+    grid-area:portfolio;
+    background-color: rgb(253, 249, 249);
+    border-radius: 15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio img{
+    width:400px;
+}
+.flamingo{
+    grid-area:flamingo;
+    background-color: blueviolet;
+    border-radius: 15px;
+    position:relative;
+}
+.flamingo img{
+    width:560px;
+    height:360px;
+    object-fit:cover;
+}
+.play-btn{
+    position:absolute;
+    top:35%;
+    left:40%;
+    background-color:rgb(199, 197, 197);
+    
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+}
+.play-btn button {
+    position:absolute;
+    top:30%;
+    left:30%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    font-size: 15px;
+    background-color: rgb(197, 195, 195);
+}
+.apple-logo{
+    grid-area:apple-logo;
+    background-color: rgb(104, 103, 103);
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.apple-logo i{
+    font-size: 40px;
+    color:white;
+}
+.apple-logo h3{
+    line-height: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color:rgb(217, 216, 216);
+}
+.side-stats{
+    grid-area:side-stats;
+    border-radius: 15px;
+}
+.award-card{
+    grid-area:award-card;
+    border-radius: 15px;
+    display:flex;
+
+}
+.img-card{
+    height:180px;
+    width:240px;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-card img{
+    height:100px;
+    width:100px;
+    object-fit: cover;
+}
+.text-card{
+     height:180px;
+    width:240px;
+    background-color: rgb(239, 179, 111);
+    margin-left: -14px;
+    border-radius: 20px;
+    padding:50px 50px;
+}
+.text-card h3{
+    
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+
+}
+.text-card h4{
+    
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(59, 59, 59);
+    font-weight: 300;
+}
+.box1{
+    height:180px;
+    width:200px;
+    background-color: rgb(167, 221, 223);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box1 h3{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+.box1 h4{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+}
+.box2{
+    height:180px;
+    width:200px;
+    background-color: rgb(160, 177, 235);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box2 h3{
+     font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+.box2 h4{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+}
