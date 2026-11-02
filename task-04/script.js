@@ -3,14 +3,13 @@
 //  c=prompt('enter any number')
 // if (a > b && a>c) {
 //     console.log("the a is greater", a);
-    
+
 // } else if (b > a && b > c) {
 //     console.log("the b is greater", b);
 // }
 // else {
 //     console.log('c is greateer',c);
 // }
-
 
 // let a = prompt('enter any number');
 // let b =  prompt('enter any number')
@@ -23,8 +22,6 @@
 // } else {
 //     console.log(c + " is greatest");
 // }
-
-
 
 // let ch = prompt('enter the char you want to check');
 
@@ -41,22 +38,19 @@
 //     console.log("Consonant");
 // }
 
-
 // num = Number(prompt('enter the number it will show you the day'))
-
-
 
 // switch (num) {
 //     case 1:
-        
+
 //         console.log('The day is monday');
 //         break;
 //     case 2:
-       
+
 //         console.log('The day is tuesday');
 //         break;
 //     case 3:
-        
+
 //         console.log('The day is wednesday');
 //         break;
 //     case 4:
@@ -79,16 +73,15 @@
 // let password = prompt('enter the password: ')
 // if (username === "admin" && password === '1234'){
 //     console.log(`the username ${username} is correct .please enter in your website`);
-    
+
 // } else {
 //     console.log('your user name and password is wrong')
 // }
 
-
 // let age = 11
 
 // let num = age>=18 ? "YOu can vote" : "you can't vote";
- 
+
 // console.log(num)
 
 // let name = 'Zikra Faheem'
@@ -107,16 +100,13 @@
 // console.log('the simple interest of the loan is', ci)
 // console.log('the total amount after including interest is',totalamount)
 
-
 // let c = Number(prompt('enter the temperature'))
 // let f = (c * 9 / 5) + 32
 // console.log('temperature in fareinheit is ',f)
 
-
 // let km = Number(prompt('enter the kilometer'))
 // let m = km * 1000
 // console.log('Distance in meters',m)
-
 
 // let units = Number(prompt('enter the units of electricity bill'))
 // let bill;
@@ -126,13 +116,12 @@
 // } else if (units <= 200) {
 //     bill = units * 3
 //     console.log('your monthly electricity bill is',bill);
-  
+
 // } else {
 //     bill = units * 5
-    
+
 // }
 // console.log('your bill is ',bill)
-
 
 //array
 
@@ -152,7 +141,6 @@
 // a[1] = a[a.length - 2];
 // a[a.length - 2] = temp;
 // console.log(a)
- 
 
 // let ab = [
 //     [10, 20, 30],
@@ -175,7 +163,6 @@
 // }
 // check([23, 43, 23, 23,34])
 
-
 // let arr = [32, 43, 44, 54]
 // let arr1 = []
 // for (let i = 0; i < arr.length; i++){
@@ -184,18 +171,15 @@
 // arr1.push(34)
 // console.log(arr1)
 
-
 // let arr = [12, 14, 16, 18, 20]
 // a = arr.pop()
 // console.log(a)
-
 
 // let arr = [12, 14, 16, 18, 20]
 // while (arr.length > 0) {
 //     (arr.pop())
 // }
 // console.log('Array is Empty')
-
 
 // let arr = ['aaliya','mariyam','priya','zikra']
 // arr.unshift('aalu', 'kaju', 'bhalu', 'kalu')
@@ -206,7 +190,6 @@
 //     arr.shift()
 // }
 // console.log(arr)
-
 
 // let arr = [12, 14, 16, 18, 20]
 // arr.splice(2,3,21,11,23,34,25)
@@ -225,9 +208,8 @@
 // let arr1 = arr.slice(1, arr.length-1)
 // console.log(arr1)
 
-
 // let arr = [10, 20, 30, 40, 50, 60, 70];
-                          
+
 // console.log(arr.slice(-5, -2));
 
 // let arr = [10, 20, 30, 40, 50, 60, 70];
@@ -240,7 +222,7 @@
 // for (let i = 0; i < arr.length; i++){
 //     if (arr[i] % 2 == 0) {
 //         evencount.push(arr[i])
-        
+
 //     }
 //     else {
 //        oddcount.push(arr[i])
@@ -256,7 +238,6 @@
 //         smallest = arr[i]
 // }
 // console.log(smallest)
-
 
 // let arr = [20, 30, 40, -1, -23, 0, -12]
 // positive = 0
@@ -283,9 +264,9 @@
 //     if (arr[i] === find) {
 //         found == true;
 //         console.log(i)
-       
+
 //     }
-    
+
 // }
 
 // if (found) {
@@ -304,19 +285,130 @@
 // }
 // console.log(count)
 
-let arr = [10, 20, 30, 30, 10, 10, 20, 50,50, 'aaliya'];
+// Those elements who come more than once
+// let arr = [10, 20, 30, 30, 10, 10, 20, 50,50, 'aaliya'];
 
-for (let i = 0; i < arr.length; i++) {
-    let count = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     let count = 0;
 
-    for (let j = 0; j < arr.length; j++) {
-        if (arr[i] === arr[j]) {
-            count++;
-        }
-    }
+//     for (let j = 0; j < arr.length; j++) {
+//         if (arr[i] === arr[j]) {
+//             count++;
+//         }
+//     }
 
-    if (count === 1) {
-        console.log(arr[i]);
-    }
-}
+//     if (count === 1) {
+//         console.log(arr[i]);
+//     }
+// }
+
+// let arr = [10, 20, 30, 30, 10, 10, 20, 50, 50, 'aaliya'];
+// let count = 0
+// for (let i = 0; i < arr.length; i++){
+//     let alreadycount = false;
+//     for (let j = 0; j < i; j++){
+//         if (arr[i] === arr[j]) {
+//             alreadycount = true;
+//             break;
+//         }
+//     }
+//     if (alreadycount === false) {
+//         count++
+//     }
+// }
+// console.log(count)
+
+// checking distinct values which counts as one only
+// let arr = [10, 20, 30, 30, 10, 10, 20, 50, 50, 'aaliya'];
+// for (let i = 0; i < arr.length; i++){
+//     let alreadycount = false;
+//     for (let j = 0; j < i; j++){
+//         if (arr[i] === arr[j]) {
+//             alreadycount = true;
+//             break;
+//         }
+//     }
+//     if (alreadycount === false) {
+//         console.log(arr[i]);
+//     }
+// }
+
+// checking common elements in both the arrays
+// let arr1 = [10, 20, 30, 30, 10, 10, 20, 50, 50, 'aaliya'];
+// let arr2 = [10, 20, 45, 'blue', 5.4, 50, 50, 'aaliya']
+// let common = []
+// for (let i = 0; i < arr1.length; i++){
+//     for (let j = 0; j <arr2.length; j++){
+//         if (arr1[i] === arr2[j]) {
+//             if (!common.includes(arr1[i])) {
+//                 common.push(arr1[i]);
+//             }
+//             break;
+//         }
+
+//     }
+
+// }
+// console.log(common);
+
+// reversing an array
+// let arr = [10, 20, 30, 30, 10, 10, 20, 50, 50, 'aaliya'];
+// for (let i = arr.length - 1; i >= 0; i--){
+//     console.log(arr[i])
+
+// }
+
+// let arr = [10, 20, 30, 30, 10, 10, 20, 50, 50, 'aaliya'];
+// let reversed = []
+// for (let i = arr.length - 1; i >= 0; i--){
+//     reversed.push(arr[i])
+// }
+// console.log(reversed)
+
+// it will reverse the array without changing the original arrya
+// let arr = [10, 20, 30, 30, 50, 'aaliya'];
+// for (let i = 0; i < arr.length / 2; i++){
+//     let temp = arr[i];
+//     arr[i] = arr[arr.length - 1 - i];
+//     arr[arr.length - 1 - i] = temp ;
+
+// }
+// console.log(arr)
+
+// put all the zero at teh end of the array
+// let arr = [21, 0, 32, 1, 0, -1, 0, 4];
+// let result = [];
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] !== 0) {
+//     result.push(arr[i]);
+//   }
+// }
+
+// for (let i = 0; i < arr.length - result.length; i++) {
+
+//     result.push(0);
+//     console.log('after adding zero',result)
+// }
+
+// console.log(result);
+
+
+// putting zeroes without changing the original array
+
+// let arr = [21, 0, 32, 1, 0, -1, 0, 4];
+// let position = 0
+// for (let i = 0; i < arr.length; i++){
+//     if (arr[i] !== 0) {
+//         arr[position]=arr[i]
+//         position++
+//     }
+ 
+// }
+// for (let i = position; i < arr.length; i++){
+//     arr[i] = 0
+
+// }
+
+// console.log(arr)
+
 
